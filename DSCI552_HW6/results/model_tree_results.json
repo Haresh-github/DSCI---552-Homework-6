@@ -1,0 +1,133 @@
+{
+  "description": "L1 logistic oblique tree with 5-fold CV (all original 60k training rows)",
+  "alpha_grid": [
+    0.0001,
+    0.0003,
+    0.001
+  ],
+  "folds": 5,
+  "max_depth": 3,
+  "smote_full_training_set": true,
+  "cv_summary": [
+    {
+      "smote": false,
+      "alpha": 0.0001,
+      "mean_auc": 0.9194141949152541,
+      "sd_auc": 0.01825221294070003,
+      "mean_cv_error": 0.0092833333333333,
+      "mean_recall": 0.584,
+      "mean_cost_per_fold": 41882.0
+    },
+    {
+      "smote": false,
+      "alpha": 0.0003,
+      "mean_auc": 0.9213129237288136,
+      "sd_auc": 0.025064806618963216,
+      "mean_cv_error": 0.00906666666666664,
+      "mean_recall": 0.615,
+      "mean_cost_per_fold": 38818.0
+    },
+    {
+      "smote": false,
+      "alpha": 0.001,
+      "mean_auc": 0.91863406779661,
+      "sd_auc": 0.0279110283727651,
+      "mean_cv_error": 0.009433333333333299,
+      "mean_recall": 0.6,
+      "mean_cost_per_fold": 40332.0
+    },
+    {
+      "smote": true,
+      "alpha": 0.0001,
+      "mean_auc": 0.9470532627118644,
+      "sd_auc": 0.00827076381167285,
+      "mean_cv_error": 0.02729999999999998,
+      "mean_recall": 0.866,
+      "mean_cost_per_fold": 16408.0
+    },
+    {
+      "smote": true,
+      "alpha": 0.0003,
+      "mean_auc": 0.9527100423728815,
+      "sd_auc": 0.009457749424697848,
+      "mean_cv_error": 0.03061666666666662,
+      "mean_recall": 0.883,
+      "mean_cost_per_fold": 15140.0
+    },
+    {
+      "smote": true,
+      "alpha": 0.001,
+      "mean_auc": 0.9575364830508475,
+      "sd_auc": 0.006746084967962259,
+      "mean_cv_error": 0.03254999999999998,
+      "mean_recall": 0.909,
+      "mean_cost_per_fold": 12824.0
+    }
+  ],
+  "models": {
+    "l1_logistic_model_tree": {
+      "alpha": 0.0003,
+      "cv_auc": 0.9213129237288136,
+      "cv_auc_sd": 0.025064806618963216,
+      "cv_error": 0.00906666666666664,
+      "cv_recall": 0.615,
+      "internal_nodes": 5,
+      "node_count": 11,
+      "training_seconds": 4.29,
+      "train": {
+        "tn": 58947,
+        "fp": 53,
+        "fn": 418,
+        "tp": 582,
+        "error": 0.00785,
+        "auc": 0.9342917033898305,
+        "recall": 0.582,
+        "precision": 0.9165354330708662,
+        "cost": 209530
+      },
+      "test": {
+        "tn": 15597,
+        "fp": 28,
+        "fn": 171,
+        "tp": 204,
+        "error": 0.0124375,
+        "auc": 0.9266253653333333,
+        "recall": 0.544,
+        "precision": 0.8793103448275862,
+        "cost": 85780
+      }
+    },
+    "l1_logistic_model_tree_smote": {
+      "alpha": 0.001,
+      "cv_auc": 0.9575364830508475,
+      "cv_auc_sd": 0.006746084967962259,
+      "cv_error": 0.03254999999999998,
+      "cv_recall": 0.909,
+      "internal_nodes": 7,
+      "node_count": 15,
+      "training_seconds": 8.43,
+      "train": {
+        "tn": 57184,
+        "fp": 1816,
+        "fn": 17,
+        "tp": 983,
+        "error": 0.03055,
+        "auc": 0.9867151101694914,
+        "recall": 0.983,
+        "precision": 0.35119685602000716,
+        "cost": 26660
+      },
+      "test": {
+        "tn": 15166,
+        "fp": 459,
+        "fn": 23,
+        "tp": 352,
+        "error": 0.030125,
+        "auc": 0.9765738666666667,
+        "recall": 0.9386666666666666,
+        "precision": 0.43403205918618987,
+        "cost": 16090
+      }
+    }
+  }
+}
